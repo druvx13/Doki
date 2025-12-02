@@ -61,7 +61,7 @@ jobs:
       # Build signed release APK using injected signing parameters  
       - name: Build signed release APK  
         run: |  
-          ./gradlew assembleRelease --no-daemon \  
+          ./gradlew :app:assembleRelease --no-daemon \  
             -Pandroid.injected.signing.store.file=$PWD/release.keystore \  
             -Pandroid.injected.signing.store.password="${{ env.STORE_PASSWORD }}" \  
             -Pandroid.injected.signing.key.alias="${{ env.KEY_ALIAS }}" \  
